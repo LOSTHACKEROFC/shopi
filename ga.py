@@ -243,10 +243,12 @@ def set_user_domain(user_id: int, domain: str):
     domains[str(user_id)] = domain
     save_domains(domains)
 
-def remove_user_domain(user_id: int):
+def remove_user_domain(user_id):
     domains = load_domains()
-    domains.pop(str(user_id), None)
-    save_domains(domains)
+    user_key = str(user_id)
+    if user_key in domains:
+        domains.pop(user_key)
+        save_domains(domains)
 
 # ─── Premium Developer Spinner Driven by API Time ──────────────────────────────
 def animate_progress(chat_id: int, msg_id: int, stop_flag: dict, start_time: float):

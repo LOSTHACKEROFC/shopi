@@ -8,7 +8,7 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 import threading
 import json
 import os
-API_TOKEN = '7422930589:AAHm0WCLv1oXJpoZFf6DVDdVAIDYfJ3F1jU'  # <-- Your actual bot token here
+API_TOKEN = '7971151809:AAH0pilifo7eRxHrbuCxQX9SP76bpLM4tEs'  # <-- Your actual bot token here
 bot = telebot.TeleBot(API_TOKEN, parse_mode="HTML")
 
 user_domains = {}

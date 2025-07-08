@@ -235,8 +235,11 @@ def save_domains(domains: dict):
     with open(DATA_FILE, "w") as f:
         json.dump(domains, f, indent=2)
 
-def get_user_domain(user_id: int) -> str | None:
+from typing import Optional
+
+def get_user_domain(user_id: int) -> Optional[str]:
     return load_domains().get(str(user_id))
+
 
 def set_user_domain(user_id: int, domain: str):
     domains = load_domains()
